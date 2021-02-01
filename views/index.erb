@@ -1,0 +1,29 @@
+<!-- display what we want -->
+
+<h1>The Best Restaurants</h1>
+
+<ul>
+  <%# erb - embedded ruby %>
+  <%# the icecream syntax %>
+  <%# FOR EACH RESTAURANT THAT WE HAVE %>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a>
+    </li>
+  <% end %>
+</ul>
+
+<%# HTTP request %>
+<%# VERB - ACTION %>
+<%# GET - READ %>
+<%# POST - CREATE %>
+<%# PATCH||PUT- UPDATE %>
+<%# DELETE- DELETE%>
+
+<form action="/restaurants" method="POST">
+  <label for="name-id">Name</label>
+  <input name="restaurant_name" id='name-id' type="text">
+  <label for="address-id">Address</label>
+  <input name="restaurant_address" id='address-id' type="text">
+  <input type="submit">
+</form>
