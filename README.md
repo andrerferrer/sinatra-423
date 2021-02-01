@@ -1,34 +1,17 @@
-## ActiveRecord basics boilerplate
+# Readme
 
-This is a minimalist implementation of ActiveRecord with one `Restaurant` model to live-code a demo for @LeWagon students, part of [Karr examples](https://github.com/lewagon/karr-examples), working with Sinatra.
+Clone this repo
 
-- clone the repo
-- run `rake db:create` to create your db
-- run your migrations with `rake db:migrate`
+`bundle install`
 
-Now you can play with the `Restaurant` model:
+`rake db:create`
 
-```bash
-rake console
-```
+`rake db:migrate`
 
-Here are some commands you can run in the console:
+`rake db:seed`
 
-```ruby
-restaurant = Restaurant.new(name: "La Tour d'Argent", address: "15 Quai de la Tournelle, 75005 Paris")
-restaurant.persisted?
-# => false
-restaurant.id
-# => nil
-restaurant.save
-restaurant.id
-# => 1
-```
+`ruby app.rb`
 
-To launch a Sinatra server just run this and open a web browser at [http://localhost:4567](http://localhost:4567):
+Go to http://localhost:4567/restaurants
 
-```bash
-bundle exec ruby app.rb
-```
-
-Enjoy!
+Have fun :D 
